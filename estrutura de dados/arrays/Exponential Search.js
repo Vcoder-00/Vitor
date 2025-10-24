@@ -42,12 +42,12 @@ function pesquisaExponencial(array, target) {
     if (array[0] === target) {
         return 0;
     }
-    let r = 1;
+    let r = 1; // ele começa do pois, já verificamos se é array[0] tem o elemento buscado
     // cade o left? a ideia é que o left vai ser sempre o r anterior, ou seja em outras palavra ele nem 
     // precisa ser escrito ele é simplemente r/2 (revertendo a ultima multiplicação)
-    let i = array.length;
+    array.length;
 
-    while (r < i && array[r] < target) {
+    while (r < array.length && array[r] < target) {
         r *= 2;
     }
 
@@ -55,11 +55,11 @@ function pesquisaExponencial(array, target) {
         return r;
     }
 
-    return pesquisaBinaria(array, target, parseInt(r / 2), Math.min(r, i - 1)); // Se o array[r] é maior que target ou undefined caso sobrepasse o array realizamos a pesquisa binária cuidadando para que o ponteiro r da binária seja ou o r caso ele seja menor ou igual a i(array.lentgh) ou o prório i caso ele ultrapasse o array
+    return pesquisaBinaria(array, target, parseInt(r / 2), Math.min(r, array.length - 1)); // Se o array[r] é maior que target ou undefined caso sobrepasse o array realizamos a pesquisa binária cuidadando para que o ponteiro r da binária seja ou o r caso ele seja menor ou igual a i(array.lentgh) ou o prório i caso ele ultrapasse o array
 }
 
-console.log(pesquisaBinaria(input, 32));
-console.log(pesquisaExponencial(input, 32));
+// console.log(pesquisaBinaria(input, 32));
+// console.log(pesquisaExponencial(input, 32));
 
 // contando os passos
 

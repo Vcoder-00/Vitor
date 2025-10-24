@@ -7,3 +7,10 @@ function fibonacci(numero) {
     }
 }
 console.log(fibonacci(input));
+
+// Outra forma
+
+const fibonacci = function fib(n) {
+    return (n <= 1 && n >= 0) ? 1 : fib(n - 1) + fib(n - 2);
+}
+console.log(fibonacci(input));

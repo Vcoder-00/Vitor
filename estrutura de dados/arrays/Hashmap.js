@@ -60,7 +60,7 @@ function firstUniqCharAlternativa(s) {
     for (const ch of s) {
         d.set(ch, (d.get(ch) || 0) + 1); //*^1
     }
-    console.log(d); //vendo o mapa
+    console.log(d); // vendo o mapa
     // Map(6) { 'l' => 1, 'e' => 3, 't' => 1, 'c' => 1, 'o' => 1, 'd' => 1 }
     // nessa versão APENAS a contagem está sendo armazenada no mapa
     // Não confunda! nesse contexto d.get(ch) é relativo a um único valor (contagem)*^1

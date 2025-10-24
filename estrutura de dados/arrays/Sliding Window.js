@@ -13,7 +13,7 @@ function maiorSubstring(array) {
     _max = 1 // tamanho minimo do maior subarray
     let counter = {};
 
-    counter[array[0]] = 1; //definindo o primeiro termo do counter: counter{b:1} (array[0] === 'b')
+    counter[array[0]] = 1; //definindo o primeiro termo do counter: counter{b:1} (array[0] === 'b') // contagem prévia do primeiro e elemento que por consequenica reduz a necessidade de ir até r < array.length para ir para  até r < array.length - 1
 
     while (r < array.length - 1) { // diminuo 1 pois o acesso do array precisa ir até length - 2 pois quando 
     // for esse valor logo dps virá r += 1 que é o ultimo acesso que queremos array[array.length - 1].
@@ -22,7 +22,7 @@ function maiorSubstring(array) {
             counter[array[r]] += 1; // caso já exista adicione um a contagem
         }
 
-        else counter[array[r]] = 1; // caso não exista crie e atribua 1 ao seu valor ao criar
+        else counter[array[r]] = 1; // caso não exista crie atributo novo e atribua 1 ao seu valor quando criar
 
         while (counter[array[r]] == 3) { // enquanto o tamanho da janela que possui mais que 2 elementos iguais estiver assim
             counter[array[l]] -= 1; // reduz o valor do ultimo termo pois a janela avançará
